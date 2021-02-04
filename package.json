@@ -1,0 +1,57 @@
+{
+  "name": "babel-plugin-clean-code",
+  "version": "0.0.1",
+  "description": "A babel plugin to delete console[log/warn/error/info] and debugger in source code",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "scripts": {
+    "test": "ava",
+    "build": "tsc --emitDeclarationOnly && babel src -d lib -x \".ts\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wfk007/babel-plugin-clean-code"
+  },
+  "keywords": [
+    "babel",
+    "babel-plugin",
+    "babel-plugin-clean-code",
+    "clean",
+    "console",
+    "debugger"
+  ],
+  "files": [
+    "README.md"
+  ],
+  "author": "Fukang Wang <ssswfk@163.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wfk007/babel-plugin-clean-code/issues"
+  },
+  "homepage": "https://github.com/wfk007/babel-plugin-clean-code",
+  "devDependencies": {
+    "@babel/cli": "^7.12.13",
+    "@babel/core": "^7.12.13",
+    "@babel/preset-env": "^7.12.13",
+    "@babel/preset-typescript": "^7.12.13",
+    "@types/babel__core": "^7.1.12",
+    "@types/babel__traverse": "^7.11.0",
+    "ava": "^3.15.0",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.1.3"
+  },
+  "babel": {
+    "presets": [
+      "@babel/env",
+      "@babel/typescript"
+    ]
+  },
+  "ava": {
+    "extensions": [
+      "ts"
+    ],
+    "require": [
+      "ts-node/register"
+    ]
+  }
+}
