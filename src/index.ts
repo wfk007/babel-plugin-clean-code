@@ -33,7 +33,8 @@ const cleanCode = () => {
             (path.node.callee as any).property &&
             consoleLevel.indexOf((path.node.callee as any).property.name) !==
               -1 &&
-            path.parent.type === "ArrowFunctionExpression"
+            (path.parent.type === "ArrowFunctionExpression" ||
+              path.parent.type === "ReturnStatement")
           ) {
             path.remove();
           }
