@@ -1,6 +1,6 @@
 {
   "name": "babel-plugin-clean-code",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A babel plugin to delete console[log/warn/error/info] and debugger in source code",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
@@ -19,9 +19,6 @@
     "clean",
     "console",
     "debugger"
-  ],
-  "files": [
-    "README.md"
   ],
   "author": "Fukang Wang <ssswfk@163.com>",
   "license": "MIT",

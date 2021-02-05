@@ -28,7 +28,9 @@ const cleanCode = () => {
           consoleLevel.length > 0
         ) {
           if (
+            (path.node.callee as any).object &&
             (path.node.callee as any).object.name === "console" &&
+            (path.node.callee as any).property &&
             consoleLevel.indexOf((path.node.callee as any).property.name) !==
               -1 &&
             path.parent.type === "ArrowFunctionExpression"
@@ -46,7 +48,9 @@ const cleanCode = () => {
         ) {
           if (
             path.node.expression.type === "CallExpression" &&
+            (path.node.expression.callee as any).object &&
             (path.node.expression.callee as any).object.name === "console" &&
+            (path.node.expression.callee as any).property &&
             consoleLevel.indexOf(
               (path.node.expression.callee as any).property.name
             ) !== -1
