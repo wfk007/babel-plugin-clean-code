@@ -2,6 +2,8 @@
 
 ## babel-plugin-clean-code
 
+![NPM version](http://img.shields.io/npm/v/babel-plugin-clean-code.svg?style=flat-square) ![NPM downloads](https://img.shields.io/npm/dm/babel-plugin-clean-code.svg?style=flat-square)
+
 ### usage
 
 ```shell
